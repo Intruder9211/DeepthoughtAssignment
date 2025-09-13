@@ -1,0 +1,407 @@
+/* ------------------------- Base Styles ------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+#header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 70px;
+    background-color: #F0F0F0;
+}
+
+.left-nav {
+    flex-basis: 20%;
+    margin-left: 10px;
+}
+
+.right-nav {
+    flex-basis: 14%;
+}
+
+.head {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: auto;
+    align-items: center;
+}
+
+.head h1 {
+    flex-basis: 50%;
+    font-size: 20px;
+    color: #0029FF;
+}
+
+.head button {
+    height: 50px;
+    flex-basis: 10%;
+    color: white;
+    background: #0029FF;
+    border-radius: 15px;
+}
+.head button:hover {
+    background: #001FCC;
+}
+
+.msg {
+    padding: 15px;
+    width: 75%;
+    margin: 15px auto;
+    background: #e6e8ea;
+    border-radius: 10px;
+}
+
+.thread {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 95%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.card h2 {
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 40px;
+    border-radius: 10px 10px 0 0;
+}
+
+.card p {
+    padding: 10px;
+}
+
+.card1 img {
+    margin: 30px 10px;
+    width: 95%;
+    height: auto;
+}
+
+.card2 h3 {
+    text-align: center;
+    background: #FEFFC033;
+    padding: 10px;
+    margin: 10px 0px;
+}
+
+.subthread {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 15px;
+    gap: 10px;
+}
+
+.layer1 {
+    height: 60px;
+    width: 90%;
+    background: #0000000D;
+    border-radius: 25px 25px 0 0;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+.layer2 {
+    position: relative;
+    height: 80px;
+    width: 90%;
+    padding: 0px 15px;
+    top: -32px;
+    background: #FAFAFA;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.layer2 textarea {
+    border: 0;
+    outline: none;
+    resize: none;
+    background: #FAFAFA;
+    width: 100%;
+    height: 80px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px auto;
+    flex-wrap: wrap;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.btn button {
+    width: 75px;
+    height: 20px;
+    font-size: 10px;
+}
+
+.btn1 {
+    margin-left: 0;
+    margin-top: 10px;
+    color: white;
+    background: #0029FF;
+    height: 35px;
+    width: 115px;
+    border-radius: 10px;
+}
+
+.layer_1 {
+    background: #0000000D;
+    width: 90%;
+    height: 45px;
+    margin: 10px auto;
+    border-radius: 25px 25px 0 0;
+    padding: 0px 15px;
+}
+
+.layer_2 {
+    position: relative;
+    height: 70px;
+    width: 90%;
+    top: -25px;
+    padding: 0px 15px;
+    background: #FAFAFA;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.layer_2 textarea {
+    border: 0;
+    outline: none;
+    resize: none;
+    background: #FAFAFA;
+    width: 100%;
+    height: 65px;
+}
+
+.subcard {
+    margin-left: 10px;
+    border: 4px solid #FAFAFA;
+}
+
+.title {
+    margin: 5px 10px;
+}
+
+.title input {
+    width: 95%;
+    height: 40px;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.content {
+    border: 4px solid #FAFAFA;
+}
+
+.content textarea {
+    padding: 10px;
+    margin: 10px 10px;
+    resize: none;
+    width: 90%;
+    height: 100px;
+}
+
+.content ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content ul li {
+    list-style: none;
+    padding: 8px;
+}
+
+.option {
+    display: inline-flex;
+    align-items: center;
+}
+
+.option img {
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.option input {
+    margin: 10px 15px;
+}
+
+.subcard1 {
+    padding: 20px;
+}
+
+.subcard1 h3 {
+    border: 4px solid #0000000D;
+    margin: 5px 20px;
+}
+
+/* Collapse content */
+.collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.col_head.active .collapse {
+    max-height: 50%;
+}
+
+.col_head.active h3 img {
+    transform: rotate(180deg);
+}
+
+/* Side board */
+.board {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: -250px;
+    transform: translateY(-50%);
+    width: 250px;
+    height: 350px;
+    padding: 15px;
+    transition: left 0.4s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.board.open {
+    left: 0;
+}
+
+.board h1 {
+    font-size: 20px;
+    text-align: center;
+    background: black;
+    color: white;
+    margin: 0 0 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.board p {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.board ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.board ul li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* ------------------------- Responsive ------------------------- */
+
+/* Extra small screens (mobile) */
+@media (max-width: 599px) {
+    .thread {
+        grid-template-columns: 1fr;
+        max-width: 95%;
+    }
+
+    .head {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 15px;
+    }
+
+    .head h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .head button {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .layer_1, .layer1, .layer_2, .layer2 {
+        width: 95%;
+        left: 0;
+    }
+
+    .board {
+        width: 200px;
+        left: -200px;
+    }
+}
+
+/* Medium screens (tablet) */
+@media (min-width: 600px) and (max-width: 991px) {
+    .thread {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 90%;
+    }
+
+    .head h1 {
+        font-size: 22px;
+    }
+
+    .msg {
+        width: 85%;
+    }
+
+    .board {
+        width: 220px;
+        left: -220px;
+    }
+}
+
+/* Large screens (desktop) */
+@media (min-width: 992px) {
+    .thread {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 75%;
+    }
+
+    .head h1 {
+        font-size: 26px;
+    }
+
+    .msg {
+        width: 75%;
+    }
+
+    .layer_2, .layer2 {
+        width: 85%;
+        left: 15px;
+    }
+
+    .layer_1, .layer1 {
+        width: 85%;
+    }
+
+    .board {
+        width: 250px;
+        left: -250px;
+    }
+}
